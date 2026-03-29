@@ -1,0 +1,16 @@
+{
+    "rules": [
+        {
+            "ext": ".txt",
+            "dest": "documents"
+        },
+        {
+            "ext": ".jpg",
+            "dest": "photos"
+        },
+        {
+            "ext": ".mp3",
+            "dest": "music"
+        }
+    ]
+}

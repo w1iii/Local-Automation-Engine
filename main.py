@@ -6,7 +6,13 @@ from pathlib import Path
 from watchdog.events import FileSystemEventHandler
 from watchdog.observers import Observer
 
+from rules_engine import Rules
+
 cwd = Path(".")
+downloads = cwd / "downloads/"
+
+rules = Rules()
+rules.load_rules()
 
 
 class Handler(FileSystemEventHandler):
@@ -24,20 +30,22 @@ class Handler(FileSystemEventHandler):
 
 def move_file(file):
     filename = Path(file).name
-    if file.endswith(".txt"):
-        dest = cwd / "documents/"
-    elif file.endswith(".jpg"):
-        dest = cwd / "photos/"
-    elif file.endswith(".mp3"):
-        dest = cwd / "music/"
-    else:
-        return
+    dest = cwd / f"{rules.find_destination(file)}/"
+    # if file.endswith(".txt"):
+    #     dest = cwd / "documents/"
+    # elif file.endswith(".jpg"):
+    #     dest = cwd / "photos/"
+    # elif file.endswith(".mp3"):
+    #     dest = cwd / "music/"
+    # else:
+    #     return
 
-    if not dest.exists():
-        Path.mkdir(dest)
+    # if not dest.exists():
+    #     Path.mkdir(dest)
+    dest.mkdir(parents=True, exist_ok=True)
 
     target_file = dest / filename
-    print(target_file)
+    # print(target_file)
     if target_file.exists():
         count = 0
         newfilename = target_file.stem
@@ -58,7 +66,8 @@ logging.basicConfig(
     level=logging.INFO, format="%(asctime)s - %(message)s", datefmt="%Y-%m-%d %H:%M:%S"
 )
 observer = Observer()
-observer.schedule(Handler(), cwd, recursive=True)
+observer.schedule(Handler(), cwd, recursive=False)
+observer.schedule(Handler(), downloads, recursive=True)
 print("Watching over: ", cwd)
 observer.start()
 
