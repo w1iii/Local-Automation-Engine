@@ -1,10 +1,12 @@
 import json
+import os
 from pathlib import Path
 
 
 class Rules:
     def __init__(self):
         pass
+        self.rules = []
 
     def load_rules(self):
         try:
@@ -12,10 +14,10 @@ class Rules:
                 # rules = f["rules"]
                 data = json.load(f)
                 rules = data["rules"]
-                for ext in rules:
-                    print(f"{ext.get('ext')} -> {ext.get('dest')}")
+                # for ext in rules:
+                #     print(f"{ext.get('ext')} -> {ext.get('dest')}")
+                self.rules = rules
                 return rules
-
         except TypeError:
             print("'_io.TextIOWrapper' object is not subscriptable")
 
@@ -28,3 +30,9 @@ class Rules:
         for rule in rules:
             if filename.endswith(rule.get("ext")):
                 return rule.get("dest")
+
+    def filesize(self, file):
+        filesize = os.path.getsize(file)
+        if filesize >= 5000000000:
+            return False
+        return True

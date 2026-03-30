@@ -31,20 +31,14 @@ class Handler(FileSystemEventHandler):
 def move_file(file):
     filename = Path(file).name
     dest = cwd / f"{rules.find_destination(file)}/"
-    # if file.endswith(".txt"):
-    #     dest = cwd / "documents/"
-    # elif file.endswith(".jpg"):
-    #     dest = cwd / "photos/"
-    # elif file.endswith(".mp3"):
-    #     dest = cwd / "music/"
-    # else:
-    #     return
-
-    # if not dest.exists():
-    #     Path.mkdir(dest)
+    # pathfile = rules.find_destination(file)
     dest.mkdir(parents=True, exist_ok=True)
 
     target_file = dest / filename
+    path = f"./{rules.find_destination(file)}"
+    if not rules.filesize(file):
+        target_file = dest / "largefiles/" / filename
+        Path(f"{path}/largefiles").mkdir(exist_ok=True)
     # print(target_file)
     if target_file.exists():
         count = 0
@@ -60,6 +54,7 @@ def move_file(file):
             count += 1
         print("file already exists, renaming to", target_file.name)
     shutil.move(file, target_file)
+    # rules.filesize(target_file, pathfile)
 
 
 logging.basicConfig(
@@ -68,7 +63,6 @@ logging.basicConfig(
 observer = Observer()
 observer.schedule(Handler(), cwd, recursive=False)
 observer.schedule(Handler(), downloads, recursive=True)
-print("Watching over: ", cwd)
 observer.start()
 
 try:
