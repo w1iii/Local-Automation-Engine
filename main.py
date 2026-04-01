@@ -3,10 +3,9 @@ import shutil
 import time
 from pathlib import Path
 
+from rules_engine import Rules
 from watchdog.events import FileSystemEventHandler
 from watchdog.observers import Observer
-
-from rules_engine import Rules
 
 cwd = Path(".")
 downloads = cwd / "downloads/"

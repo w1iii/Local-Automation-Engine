@@ -11,6 +11,10 @@
         {
             "ext": ".mp3",
             "dest": "music"
+        },
+        {
+            "ext": ".pdf",
+            "dest": "pdf"
         }
     ]
 }
