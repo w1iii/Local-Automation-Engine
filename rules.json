@@ -2,19 +2,35 @@
     "rules": [
         {
             "ext": ".txt",
-            "dest": "documents"
+            "dest": "~/Documents"
+        },
+        {
+            "ext": ".docx",
+            "dest": "~/Documents"
         },
         {
             "ext": ".jpg",
-            "dest": "photos"
+            "dest": "~/Pictures"
+        },
+        {
+            "ext": ".png",
+            "dest": "~/Pictures"
+        },
+        {
+            "ext": ".svg",
+            "dest": "~/Pictures"
+        },
+        {
+            "ext": ".HEIC",
+            "dest": "~/Pictures"
         },
         {
             "ext": ".mp3",
-            "dest": "music"
+            "dest": "~/Music"
         },
         {
             "ext": ".pdf",
-            "dest": "pdf"
+            "dest": "~/Documents"
         }
     ]
 }

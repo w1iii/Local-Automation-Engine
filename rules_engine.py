@@ -5,7 +5,8 @@ from pathlib import Path
 import typer
 
 app = typer.Typer()
-rules_file = Path("./rules.json")
+SCRIPT_DIR = Path(__file__).parent.resolve()
+rules_file = SCRIPT_DIR / "rules.json"
 
 
 class Rules:
@@ -56,17 +57,19 @@ class Rules:
 
     def load_rules(self):
         try:
-            with open("rules.json", "r") as f:
+            with open(rules_file, "r") as f:
                 data = json.load(f)
-                rules = data["rules"]
-                self.rules = rules
-                return rules
+                self.rules = data.get("rules", [])
+                return self.rules
         except FileNotFoundError:
-            print("rules.json not found")
+            print(f"{rules_file} not found")
             return []
         except json.JSONDecodeError:
             print("Invalid JSON in rules.json")
             return []
+
+    def resolve_destination(self, dest_path):
+        return Path(dest_path).expanduser().resolve()
 
     def test_rules(self, file):
         print("test rules: ", file)

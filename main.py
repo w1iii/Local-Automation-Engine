@@ -12,8 +12,18 @@ from watchdog.observers import Observer
 from rules_engine import Rules
 from rules_engine import app as rules_app
 
-cwd = Path(".")
-downloads = cwd / "downloads/"
+SCRIPT_DIR = Path(__file__).parent.resolve()
+cwd = SCRIPT_DIR
+downloads = Path.home() / "Downloads"
+
+EXCLUDE_PATTERNS = [
+    ".download",
+    ".crdownload",
+    ".part",
+    ".partial",
+    ".tmp",
+    "observer.pid",
+]
 
 rules = Rules()
 app = typer.Typer()
@@ -21,19 +31,23 @@ app.add_typer(rules_app, name="rules")
 observer = Observer()
 rules.load_rules()
 
-LOG_FILE = "app.log"
+LOG_FILE = SCRIPT_DIR / "app.log"
 
 logger = logging.getLogger("file_sorter")
 logger.setLevel(logging.INFO)
 
 console_handler = logging.StreamHandler()
 console_handler.setLevel(logging.DEBUG)
-console_format = logging.Formatter("%(asctime)s - %(message)s", datefmt="%Y-%m-%d %H:%M:%S")
+console_format = logging.Formatter(
+    "%(asctime)s - %(message)s", datefmt="%Y-%m-%d %H:%M:%S"
+)
 console_handler.setFormatter(console_format)
 
 file_handler = logging.FileHandler(LOG_FILE)
 file_handler.setLevel(logging.DEBUG)
-file_format = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s", datefmt="%Y-%m-%d %H:%M:%S")
+file_format = logging.Formatter(
+    "%(asctime)s - %(levelname)s - %(message)s", datefmt="%Y-%m-%d %H:%M:%S"
+)
 file_handler.setFormatter(file_format)
 
 logger.addHandler(console_handler)
@@ -42,8 +56,13 @@ logger.addHandler(file_handler)
 
 class Handler(FileSystemEventHandler):
     def on_created(self, event):
-        logger.info(f"File detected: {event.src_path}")
         file = event.src_path
+
+        for pattern in EXCLUDE_PATTERNS:
+            if pattern in file:
+                return
+
+        logger.info(f"File detected: {event.src_path}")
         move_file(file)
 
     def on_deleted(self, event):
@@ -59,14 +78,13 @@ def move_file(file):
     if not destination:
         logger.warning(f"No rule for {filename}, skipping")
         return
-    dest = cwd / f"{destination}/"
+    dest = rules.resolve_destination(destination)
     dest.mkdir(parents=True, exist_ok=True)
 
     target_file = dest / filename
-    path = f"./{destination}"
     if not rules.filesize(file):
-        target_file = dest / "largefiles/" / filename
-        Path(f"{path}/largefiles").mkdir(exist_ok=True)
+        target_file = dest / "largefiles" / filename
+        (dest / "largefiles").mkdir(exist_ok=True)
     if target_file.exists():
         count = 0
         newfilename = target_file.stem
@@ -90,7 +108,7 @@ def check_folder(folder):
         if item.is_file():
             dest = rules.find_destination(str(item))
             if dest:
-                expected_dest = cwd / dest
+                expected_dest = rules.resolve_destination(dest)
                 if item.parent.resolve() == expected_dest.resolve():
                     logger.debug(f"Already in correct folder: {item.name}")
                 else:
@@ -102,9 +120,11 @@ def check_folder(folder):
 
 
 @app.command(name="clean")
-def clean_folder(folder: str = typer.Option(..., help="folder")):
-    base_dir = Path.cwd()
-    target_folder = base_dir / folder
+def clean_folder(folder: str = typer.Option(".", help="folder (use '.' for current directory)")):
+    if folder == ".":
+        target_folder = Path.cwd()
+    else:
+        target_folder = Path(folder).expanduser().resolve()
 
     files_to_move = check_folder(target_folder)
     logger.info(f"Files to move: {len(files_to_move)}")
@@ -120,15 +140,15 @@ def clean_folder(folder: str = typer.Option(..., help="folder")):
 
 
 @app.command(name="start")
-def start_obs():
-    logger.info("Starting file watcher...")
-    with open("observer.pid", "w") as f:
+def start_obs(path: str = typer.Option(".", help="path to watch (use '.' for current directory)")):
+    watch_path = Path(path).expanduser().resolve() if path != "." else Path.cwd()
+    logger.info(f"Starting file watcher on: {watch_path}")
+    with open(SCRIPT_DIR / "observer.pid", "w") as f:
         pid = os.getpid()
         f.write(str(pid))
     logger.info(f"Watcher started with PID: {pid}")
 
-    observer.schedule(Handler(), str(cwd), recursive=False)
-    observer.schedule(Handler(), str(downloads), recursive=True)
+    observer.schedule(Handler(), str(watch_path), recursive=True)
     observer.start()
 
     try:
@@ -138,19 +158,20 @@ def start_obs():
         observer.stop()
         observer.join()
     finally:
-        if os.path.exists("observer.pid"):
-            os.remove("observer.pid")
+        if (SCRIPT_DIR / "observer.pid").exists():
+            (SCRIPT_DIR / "observer.pid").unlink()
         logger.info("Watcher stopped")
 
 
 @app.command(name="stop")
 def stop_obs():
+    pid_file = SCRIPT_DIR / "observer.pid"
     try:
-        with open("observer.pid", "r") as f:
+        with open(pid_file, "r") as f:
             pid = int(f.read().strip())
         logger.info(f"Stopping watcher with PID: {pid}...")
         os.kill(pid, signal.SIGINT)
-        os.remove("observer.pid")
+        pid_file.unlink()
         logger.info("Watcher stopped successfully")
     except FileNotFoundError:
         logger.error("PID file not found. Is the watcher running?")

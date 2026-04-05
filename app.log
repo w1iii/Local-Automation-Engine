@@ -3,3 +3,508 @@
 2026-04-05 17:23:22 - INFO - Needs moving: new.txt -> documents
 2026-04-05 17:23:22 - INFO - Files to move: 1
 2026-04-05 17:23:22 - INFO - Moved: new.txt -> documents/new.txt
+2026-04-05 17:32:53 - INFO - Starting file watcher...
+2026-04-05 17:32:53 - INFO - Watcher started with PID: 78670
+2026-04-05 17:32:53 - INFO - File detected: /Users/wii/Projects/python/learning/pathlib/observer.pid
+2026-04-05 17:32:53 - WARNING - No rule for observer.pid, skipping
+2026-04-05 17:34:06 - INFO - Watcher stopped
+2026-04-05 17:36:11 - INFO - Starting file watcher...
+2026-04-05 17:36:11 - INFO - Watcher started with PID: 79028
+2026-04-05 17:36:11 - INFO - File detected: /Users/wii/Projects/python/learning/pathlib/observer.pid
+2026-04-05 17:36:11 - WARNING - No rule for observer.pid, skipping
+2026-04-05 17:36:43 - INFO - File detected: /Users/wii/Downloads/THESIS 1.docx.download/THESIS 1.docx
+2026-04-05 17:36:43 - WARNING - No rule for THESIS 1.docx, skipping
+2026-04-05 17:36:43 - INFO - File moved: /Users/wii/Downloads/THESIS 1.docx.download/THESIS 1.docx
+2026-04-05 17:36:43 - INFO - File detected: /Users/wii/Downloads/THESIS 1.docx.download
+2026-04-05 17:36:43 - WARNING - No rule for THESIS 1.docx.download, skipping
+2026-04-05 17:36:43 - INFO - File deleted: /Users/wii/Downloads/THESIS 1.docx.download
+2026-04-05 17:40:31 - INFO - Watcher stopped
+2026-04-05 17:40:40 - INFO - Starting file watcher...
+2026-04-05 17:40:40 - INFO - Watcher started with PID: 79699
+2026-04-05 17:40:40 - INFO - File detected: /Users/wii/Projects/python/learning/pathlib/observer.pid
+2026-04-05 17:40:40 - WARNING - No rule for observer.pid, skipping
+2026-04-05 17:40:49 - INFO - File detected: /Users/wii/Downloads/THESIS 1.docx.download/THESIS 1.docx
+2026-04-05 17:40:50 - INFO - Watcher stopped
+2026-04-05 17:44:07 - INFO - Needs moving: speech.docx -> documents
+2026-04-05 17:44:07 - INFO - Needs moving: Unknown-5.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: CAS_BADMINTON-2.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: Untitled-5.pdf -> pdf
+2026-04-05 17:44:07 - INFO - Needs moving: stat-data.docx -> documents
+2026-04-05 17:44:07 - INFO - Needs moving: Untitled-4.pdf -> pdf
+2026-04-05 17:44:07 - INFO - Needs moving: Unknown-4.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: Digital_Divide_Exam_Reviewer.pdf -> pdf
+2026-04-05 17:44:07 - INFO - Needs moving: CONCEPT PAPER-5.docx -> documents
+2026-04-05 17:44:07 - INFO - Needs moving: Unknown-6.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: sponsors.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: mod2_assess.pdf -> pdf
+2026-04-05 17:44:07 - INFO - Needs moving: CV.docx -> documents
+2026-04-05 17:44:07 - INFO - Needs moving: EGY.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: Unknown-7.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: Unknown-3.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: CATCOM.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: APA_TTest_Report.docx -> documents
+2026-04-05 17:44:07 - INFO - Needs moving: CAS_BADMINTON_INVERTED2.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: Untitled-3.pdf -> pdf
+2026-04-05 17:44:07 - INFO - Needs moving: Untitled-2.pdf -> pdf
+2026-04-05 17:44:07 - INFO - Needs moving: CONCEPT PAPER-4.docx -> documents
+2026-04-05 17:44:07 - INFO - Needs moving: 81bac5c67d487459bf7d094a73bd2aac.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: Unknown-2.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: SAMS.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: 830.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: 588580857_18381199729149083_1673308490929260880_n.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: dbc53e60ee4a88a9dd70068b4fabe8b2-2.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: Copy of THESIS 1.docx -> documents
+2026-04-05 17:44:07 - INFO - Needs moving: wolf-2.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: CAS_BADMINTON_INVERTED.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: 08ecf277d41d724e58d6b6c45d7c40fe.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: Cochran_Sample_Size_Computation.docx -> documents
+2026-04-05 17:44:07 - INFO - Needs moving: Lomugdang_Health Declaration and Liability waiver.docx -> documents
+2026-04-05 17:44:07 - INFO - Needs moving: CONCEPT PAPER-3.docx -> documents
+2026-04-05 17:44:07 - INFO - Needs moving: CV2.docx -> documents
+2026-04-05 17:44:07 - INFO - Needs moving: APA_Descriptive_Statistics_Report.pdf -> pdf
+2026-04-05 17:44:07 - INFO - Needs moving: LearningTask3-2.pdf -> pdf
+2026-04-05 17:44:07 - INFO - Needs moving: MATH4PS-M5-ASSESSMENT.pdf -> pdf
+2026-04-05 17:44:07 - INFO - Needs moving: testcolor.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: c51110b35702b94903d9c7a0c15acb17.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: ABANG LINGKOD.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: 629186449_879099884899477_6428664985897024047_n.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: 1-Impact-of-the-Internet-and-Social-Media-to-the-Society.pdf -> pdf
+2026-04-05 17:44:07 - INFO - Needs moving: Untitled document.docx -> documents
+2026-04-05 17:44:07 - INFO - Needs moving: LOMUGDANG_Parental Consent for Extra Curricular Activities.docx -> documents
+2026-04-05 17:44:07 - INFO - Needs moving: Unknown.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: JAMOVI_Results_with_Interpretation.pdf -> pdf
+2026-04-05 17:44:07 - INFO - Needs moving: Unknown-11.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: Unknown-10.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: SIENNA SPIRO - Die On This Hill (Karaoke Version).mp3 -> music
+2026-04-05 17:44:07 - INFO - Needs moving: CV_LOMUGDANG-2.docx -> documents
+2026-04-05 17:44:07 - INFO - Needs moving: MODULE 1.pdf -> pdf
+2026-04-05 17:44:07 - INFO - Needs moving: CV_LOMUGDANG.docx -> documents
+2026-04-05 17:44:07 - INFO - Needs moving: 625316470_1254439329983820_1168016305028258501_n.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: 4-Design-Thinking.pdf -> pdf
+2026-04-05 17:44:07 - INFO - Needs moving: stat-data-final.docx -> documents
+2026-04-05 17:44:07 - INFO - Needs moving: back-dark.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: stat-data.pdf -> pdf
+2026-04-05 17:44:07 - INFO - Needs moving: CV_LOMUGDANG-3.docx -> documents
+2026-04-05 17:44:07 - INFO - Needs moving: 6f30a88a124ff0e57d9ca5bac6430ef6-2-2.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: 616555689_908716811676938_4872601207530963917_n.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: frisbee_back.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: 20260307022742.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: cba-frisbee.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: SCORING-RUBRIC-FOR-RATING-THE-ESSAY.docx -> documents
+2026-04-05 17:44:07 - INFO - Needs moving: 3a5fb2c5b45ae80c5473ef09f8a8694d-2.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: M5 Assessment.pdf -> pdf
+2026-04-05 17:44:07 - INFO - Needs moving: IMG_4163.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: cba.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: 02-Soccer Jersey Mockup_PSD.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: CONCEPT PAPER-2.docx -> documents
+2026-04-05 17:44:07 - INFO - Needs moving: frisbee_front.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: 4-Ethics-in-the-Computing-World.pdf -> pdf
+2026-04-05 17:44:07 - INFO - Needs moving: wolf.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: test.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: music.mp3 -> music
+2026-04-05 17:44:07 - INFO - Needs moving: inverted_back.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: aea21c2b7c72fbb16af3bc8c82106328-2.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: 616841395_908715065010446_4649963880594142652_n.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: PSPEAK.docx -> documents
+2026-04-05 17:44:07 - INFO - Needs moving: bgt.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: Impact_of_the_Internet_and_Social_Media_Reviewer.pdf -> pdf
+2026-04-05 17:44:07 - INFO - Needs moving: dbc53e60ee4a88a9dd70068b4fabe8b2.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: cba-frisbee-2.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: THESIS 1-3.docx -> documents
+2026-04-05 17:44:07 - INFO - Needs moving: THESIS 1-2.docx -> documents
+2026-04-05 17:44:07 - INFO - Needs moving: inverted_white.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: 3581470_orig.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: c35f35cd6dc645e513a23103725eb22d.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: LearningTask3.pdf -> pdf
+2026-04-05 17:44:07 - INFO - Needs moving: stat-data-4.docx -> documents
+2026-04-05 17:44:07 - INFO - Needs moving: bgt-2.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: bg-pivot.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: IMG_4155.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: revised_concept_paper_2021_plus_references.docx -> documents
+2026-04-05 17:44:07 - INFO - Needs moving: 830-2.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: front-white.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: CONCEPT PAPER.docx -> documents
+2026-04-05 17:44:07 - INFO - Needs moving: profile.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: stat-data-3.pdf -> pdf
+2026-04-05 17:44:07 - INFO - Needs moving: stat-data-2.pdf -> pdf
+2026-04-05 17:44:07 - INFO - Needs moving: 1.2_Lomugdang-2.docx -> documents
+2026-04-05 17:44:07 - INFO - Needs moving: test.txt -> documents
+2026-04-05 17:44:07 - INFO - Needs moving: 658062647_1586017116024428_3115011682023531109_n.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: 02-Soccer Jersey Mockup_PSD-2.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: Terminal Saved Output.txt -> documents
+2026-04-05 17:44:07 - INFO - Needs moving: stat-data-3.docx -> documents
+2026-04-05 17:44:07 - INFO - Needs moving: 02-Soccer Jersey Mockup_PSD-3.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: APA_TTest_Report-3.docx -> documents
+2026-04-05 17:44:07 - INFO - Needs moving: 6f30a88a124ff0e57d9ca5bac6430ef6-4.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: music2.mp3 -> music
+2026-04-05 17:44:07 - INFO - Needs moving: THESIS 1.docx -> documents
+2026-04-05 17:44:07 - INFO - Needs moving: b9fc6f9a5346e7a7191b37f53e86c59b.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: CAS_BADMINTON.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: 2-Digital-Divide-and-Social-Media-Accessibility.pdf -> pdf
+2026-04-05 17:44:07 - INFO - Needs moving: pic.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: cba_frsb.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: MR KOKIO.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: Digital_Divide_Study_Reviewer.pdf -> pdf
+2026-04-05 17:44:07 - INFO - Needs moving: Untitled.pdf -> pdf
+2026-04-05 17:44:07 - INFO - Needs moving: cae32e39ee077dddf2a14b5cf091399c.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: CONCEPT PAPER-6.docx -> documents
+2026-04-05 17:44:07 - INFO - Needs moving: Cochran_Sample_Size_Computation-2.docx -> documents
+2026-04-05 17:44:07 - INFO - Needs moving: 3-Empowering-People-With-Disabilities.pdf -> pdf
+2026-04-05 17:44:07 - INFO - Needs moving: 6f30a88a124ff0e57d9ca5bac6430ef6-3.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: 5-Business-Models-and-the-Business-Model-Canvas.pdf -> pdf
+2026-04-05 17:44:07 - INFO - Needs moving: CAS_BADMINTON-2-3-5.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: 615489968_908716668343619_5619980655087643500_n.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: bgt2.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: 1.2_Lomugdang.docx -> documents
+2026-04-05 17:44:07 - INFO - Needs moving: 3a5fb2c5b45ae80c5473ef09f8a8694d.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: 6f30a88a124ff0e57d9ca5bac6430ef6-2.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: Untitled design.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: aea21c2b7c72fbb16af3bc8c82106328.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: pic-2.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: Unknown-9.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: 5c161a8313c3ccade1d47b3ab9874709.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: 240_F_669423901_EiiIpShi901MlDWp1omjGMmB22fyGVic.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: APA_TTest_Report-2.docx -> documents
+2026-04-05 17:44:07 - INFO - Needs moving: image.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: 81bac5c67d487459bf7d094a73bd2aac-2.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: 08ecf277d41d724e58d6b6c45d7c40fe-2.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: stat-data-2.docx -> documents
+2026-04-05 17:44:07 - INFO - Needs moving: 6f30a88a124ff0e57d9ca5bac6430ef6.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: Unknown-8.jpg -> photos
+2026-04-05 17:44:07 - INFO - Needs moving: meta_ethics_report.docx -> documents
+2026-04-05 17:44:07 - INFO - Needs moving: bg.jpg -> photos
+2026-04-05 17:44:07 - INFO - Files to move: 148
+2026-04-05 17:44:07 - INFO - Moved: speech.docx -> documents/speech.docx
+2026-04-05 17:44:07 - INFO - Moved: Unknown-5.jpg -> photos/Unknown-5.jpg
+2026-04-05 17:44:07 - INFO - Moved: CAS_BADMINTON-2.jpg -> photos/CAS_BADMINTON-2.jpg
+2026-04-05 17:44:07 - INFO - Moved: Untitled-5.pdf -> pdf/Untitled-5.pdf
+2026-04-05 17:44:07 - INFO - Moved: stat-data.docx -> documents/stat-data.docx
+2026-04-05 17:44:07 - INFO - Moved: Untitled-4.pdf -> pdf/Untitled-4.pdf
+2026-04-05 17:44:07 - INFO - Moved: Unknown-4.jpg -> photos/Unknown-4.jpg
+2026-04-05 17:44:07 - INFO - Moved: Digital_Divide_Exam_Reviewer.pdf -> pdf/Digital_Divide_Exam_Reviewer.pdf
+2026-04-05 17:44:07 - INFO - Moved: CONCEPT PAPER-5.docx -> documents/CONCEPT PAPER-5.docx
+2026-04-05 17:44:07 - INFO - Moved: Unknown-6.jpg -> photos/Unknown-6.jpg
+2026-04-05 17:44:07 - INFO - Moved: sponsors.jpg -> photos/sponsors.jpg
+2026-04-05 17:44:07 - INFO - Moved: mod2_assess.pdf -> pdf/mod2_assess.pdf
+2026-04-05 17:44:07 - INFO - Moved: CV.docx -> documents/CV.docx
+2026-04-05 17:44:07 - INFO - Moved: EGY.jpg -> photos/EGY.jpg
+2026-04-05 17:44:07 - INFO - Moved: Unknown-7.jpg -> photos/Unknown-7.jpg
+2026-04-05 17:44:07 - INFO - Moved: Unknown-3.jpg -> photos/Unknown-3.jpg
+2026-04-05 17:44:07 - INFO - Moved: CATCOM.jpg -> photos/CATCOM.jpg
+2026-04-05 17:44:07 - INFO - Moved: APA_TTest_Report.docx -> documents/APA_TTest_Report.docx
+2026-04-05 17:44:07 - INFO - Moved: CAS_BADMINTON_INVERTED2.jpg -> photos/CAS_BADMINTON_INVERTED2.jpg
+2026-04-05 17:44:07 - INFO - Moved: Untitled-3.pdf -> pdf/Untitled-3.pdf
+2026-04-05 17:44:07 - INFO - Moved: Untitled-2.pdf -> pdf/Untitled-2.pdf
+2026-04-05 17:44:07 - INFO - Moved: CONCEPT PAPER-4.docx -> documents/CONCEPT PAPER-4.docx
+2026-04-05 17:44:07 - INFO - Moved: 81bac5c67d487459bf7d094a73bd2aac.jpg -> photos/81bac5c67d487459bf7d094a73bd2aac.jpg
+2026-04-05 17:44:07 - INFO - Moved: Unknown-2.jpg -> photos/Unknown-2.jpg
+2026-04-05 17:44:07 - INFO - Moved: SAMS.jpg -> photos/SAMS.jpg
+2026-04-05 17:44:07 - INFO - Moved: 830.jpg -> photos/830.jpg
+2026-04-05 17:44:07 - INFO - Moved: 588580857_18381199729149083_1673308490929260880_n.jpg -> photos/588580857_18381199729149083_1673308490929260880_n.jpg
+2026-04-05 17:44:07 - INFO - Moved: dbc53e60ee4a88a9dd70068b4fabe8b2-2.jpg -> photos/dbc53e60ee4a88a9dd70068b4fabe8b2-2.jpg
+2026-04-05 17:44:07 - INFO - Moved: Copy of THESIS 1.docx -> documents/Copy of THESIS 1.docx
+2026-04-05 17:44:07 - INFO - Moved: wolf-2.jpg -> photos/wolf-2.jpg
+2026-04-05 17:44:07 - INFO - Moved: CAS_BADMINTON_INVERTED.jpg -> photos/CAS_BADMINTON_INVERTED.jpg
+2026-04-05 17:44:07 - INFO - Moved: 08ecf277d41d724e58d6b6c45d7c40fe.jpg -> photos/08ecf277d41d724e58d6b6c45d7c40fe.jpg
+2026-04-05 17:44:07 - INFO - Moved: Cochran_Sample_Size_Computation.docx -> documents/Cochran_Sample_Size_Computation.docx
+2026-04-05 17:44:07 - INFO - Moved: Lomugdang_Health Declaration and Liability waiver.docx -> documents/Lomugdang_Health Declaration and Liability waiver.docx
+2026-04-05 17:44:07 - INFO - Moved: CONCEPT PAPER-3.docx -> documents/CONCEPT PAPER-3.docx
+2026-04-05 17:44:07 - INFO - Moved: CV2.docx -> documents/CV2.docx
+2026-04-05 17:44:07 - INFO - Moved: APA_Descriptive_Statistics_Report.pdf -> pdf/APA_Descriptive_Statistics_Report.pdf
+2026-04-05 17:44:07 - INFO - Moved: LearningTask3-2.pdf -> pdf/LearningTask3-2.pdf
+2026-04-05 17:44:07 - INFO - Moved: MATH4PS-M5-ASSESSMENT.pdf -> pdf/MATH4PS-M5-ASSESSMENT.pdf
+2026-04-05 17:44:07 - INFO - Moved: testcolor.jpg -> photos/testcolor.jpg
+2026-04-05 17:44:07 - INFO - Moved: c51110b35702b94903d9c7a0c15acb17.jpg -> photos/c51110b35702b94903d9c7a0c15acb17.jpg
+2026-04-05 17:44:07 - INFO - Moved: ABANG LINGKOD.jpg -> photos/ABANG LINGKOD.jpg
+2026-04-05 17:44:07 - INFO - Moved: 629186449_879099884899477_6428664985897024047_n.jpg -> photos/629186449_879099884899477_6428664985897024047_n.jpg
+2026-04-05 17:44:07 - INFO - Moved: 1-Impact-of-the-Internet-and-Social-Media-to-the-Society.pdf -> pdf/1-Impact-of-the-Internet-and-Social-Media-to-the-Society.pdf
+2026-04-05 17:44:07 - INFO - Moved: Untitled document.docx -> documents/Untitled document.docx
+2026-04-05 17:44:07 - INFO - Moved: LOMUGDANG_Parental Consent for Extra Curricular Activities.docx -> documents/LOMUGDANG_Parental Consent for Extra Curricular Activities.docx
+2026-04-05 17:44:07 - INFO - Moved: Unknown.jpg -> photos/Unknown.jpg
+2026-04-05 17:44:07 - INFO - Moved: JAMOVI_Results_with_Interpretation.pdf -> pdf/JAMOVI_Results_with_Interpretation.pdf
+2026-04-05 17:44:07 - INFO - Moved: Unknown-11.jpg -> photos/Unknown-11.jpg
+2026-04-05 17:44:07 - INFO - Moved: Unknown-10.jpg -> photos/Unknown-10.jpg
+2026-04-05 17:44:07 - INFO - Moved: SIENNA SPIRO - Die On This Hill (Karaoke Version).mp3 -> music/SIENNA SPIRO - Die On This Hill (Karaoke Version).mp3
+2026-04-05 17:44:07 - INFO - Moved: CV_LOMUGDANG-2.docx -> documents/CV_LOMUGDANG-2.docx
+2026-04-05 17:44:07 - INFO - Moved: MODULE 1.pdf -> pdf/MODULE 1.pdf
+2026-04-05 17:44:07 - INFO - Moved: CV_LOMUGDANG.docx -> documents/CV_LOMUGDANG.docx
+2026-04-05 17:44:07 - INFO - Moved: 625316470_1254439329983820_1168016305028258501_n.jpg -> photos/625316470_1254439329983820_1168016305028258501_n.jpg
+2026-04-05 17:44:07 - INFO - Moved: 4-Design-Thinking.pdf -> pdf/4-Design-Thinking.pdf
+2026-04-05 17:44:07 - INFO - Moved: stat-data-final.docx -> documents/stat-data-final.docx
+2026-04-05 17:44:07 - INFO - Moved: back-dark.jpg -> photos/back-dark.jpg
+2026-04-05 17:44:07 - INFO - Moved: stat-data.pdf -> pdf/stat-data.pdf
+2026-04-05 17:44:07 - INFO - Moved: CV_LOMUGDANG-3.docx -> documents/CV_LOMUGDANG-3.docx
+2026-04-05 17:44:07 - INFO - Moved: 6f30a88a124ff0e57d9ca5bac6430ef6-2-2.jpg -> photos/6f30a88a124ff0e57d9ca5bac6430ef6-2-2.jpg
+2026-04-05 17:44:07 - INFO - Moved: 616555689_908716811676938_4872601207530963917_n.jpg -> photos/616555689_908716811676938_4872601207530963917_n.jpg
+2026-04-05 17:44:07 - INFO - Moved: frisbee_back.jpg -> photos/frisbee_back.jpg
+2026-04-05 17:44:07 - INFO - Moved: 20260307022742.jpg -> photos/20260307022742.jpg
+2026-04-05 17:44:07 - INFO - Moved: cba-frisbee.jpg -> photos/cba-frisbee.jpg
+2026-04-05 17:44:07 - INFO - Moved: SCORING-RUBRIC-FOR-RATING-THE-ESSAY.docx -> documents/SCORING-RUBRIC-FOR-RATING-THE-ESSAY.docx
+2026-04-05 17:44:07 - INFO - Moved: 3a5fb2c5b45ae80c5473ef09f8a8694d-2.jpg -> photos/3a5fb2c5b45ae80c5473ef09f8a8694d-2.jpg
+2026-04-05 17:44:07 - INFO - Moved: M5 Assessment.pdf -> pdf/M5 Assessment.pdf
+2026-04-05 17:44:07 - INFO - Moved: IMG_4163.jpg -> photos/IMG_4163.jpg
+2026-04-05 17:44:07 - INFO - Moved: cba.jpg -> photos/cba.jpg
+2026-04-05 17:44:07 - INFO - Moved: 02-Soccer Jersey Mockup_PSD.jpg -> photos/02-Soccer Jersey Mockup_PSD.jpg
+2026-04-05 17:44:07 - INFO - Moved: CONCEPT PAPER-2.docx -> documents/CONCEPT PAPER-2.docx
+2026-04-05 17:44:07 - INFO - Moved: frisbee_front.jpg -> photos/frisbee_front.jpg
+2026-04-05 17:44:07 - INFO - Moved: 4-Ethics-in-the-Computing-World.pdf -> pdf/4-Ethics-in-the-Computing-World.pdf
+2026-04-05 17:44:07 - INFO - Moved: wolf.jpg -> photos/wolf.jpg
+2026-04-05 17:44:07 - INFO - Moved: test.jpg -> photos/test.jpg
+2026-04-05 17:44:07 - INFO - File exists, renamed to: music1.mp3
+2026-04-05 17:44:07 - INFO - Moved: music.mp3 -> music/music1.mp3
+2026-04-05 17:44:07 - INFO - Moved: inverted_back.jpg -> photos/inverted_back.jpg
+2026-04-05 17:44:07 - INFO - Moved: aea21c2b7c72fbb16af3bc8c82106328-2.jpg -> photos/aea21c2b7c72fbb16af3bc8c82106328-2.jpg
+2026-04-05 17:44:07 - INFO - Moved: 616841395_908715065010446_4649963880594142652_n.jpg -> photos/616841395_908715065010446_4649963880594142652_n.jpg
+2026-04-05 17:44:07 - INFO - Moved: PSPEAK.docx -> documents/PSPEAK.docx
+2026-04-05 17:44:07 - INFO - Moved: bgt.jpg -> photos/bgt.jpg
+2026-04-05 17:44:07 - INFO - Moved: Impact_of_the_Internet_and_Social_Media_Reviewer.pdf -> pdf/Impact_of_the_Internet_and_Social_Media_Reviewer.pdf
+2026-04-05 17:44:07 - INFO - Moved: dbc53e60ee4a88a9dd70068b4fabe8b2.jpg -> photos/dbc53e60ee4a88a9dd70068b4fabe8b2.jpg
+2026-04-05 17:44:07 - INFO - Moved: cba-frisbee-2.jpg -> photos/cba-frisbee-2.jpg
+2026-04-05 17:44:07 - INFO - Moved: THESIS 1-3.docx -> documents/THESIS 1-3.docx
+2026-04-05 17:44:07 - INFO - Moved: THESIS 1-2.docx -> documents/THESIS 1-2.docx
+2026-04-05 17:44:07 - INFO - Moved: inverted_white.jpg -> photos/inverted_white.jpg
+2026-04-05 17:44:07 - INFO - Moved: 3581470_orig.jpg -> photos/3581470_orig.jpg
+2026-04-05 17:44:07 - INFO - Moved: c35f35cd6dc645e513a23103725eb22d.jpg -> photos/c35f35cd6dc645e513a23103725eb22d.jpg
+2026-04-05 17:44:07 - INFO - Moved: LearningTask3.pdf -> pdf/LearningTask3.pdf
+2026-04-05 17:44:07 - INFO - Moved: stat-data-4.docx -> documents/stat-data-4.docx
+2026-04-05 17:44:07 - INFO - Moved: bgt-2.jpg -> photos/bgt-2.jpg
+2026-04-05 17:44:07 - INFO - Moved: bg-pivot.jpg -> photos/bg-pivot.jpg
+2026-04-05 17:44:07 - INFO - Moved: IMG_4155.jpg -> photos/IMG_4155.jpg
+2026-04-05 17:44:07 - INFO - Moved: revised_concept_paper_2021_plus_references.docx -> documents/revised_concept_paper_2021_plus_references.docx
+2026-04-05 17:44:07 - INFO - Moved: 830-2.jpg -> photos/830-2.jpg
+2026-04-05 17:44:07 - INFO - Moved: front-white.jpg -> photos/front-white.jpg
+2026-04-05 17:44:07 - INFO - Moved: CONCEPT PAPER.docx -> documents/CONCEPT PAPER.docx
+2026-04-05 17:44:07 - INFO - Moved: profile.jpg -> photos/profile.jpg
+2026-04-05 17:44:07 - INFO - Moved: stat-data-3.pdf -> pdf/stat-data-3.pdf
+2026-04-05 17:44:07 - INFO - Moved: stat-data-2.pdf -> pdf/stat-data-2.pdf
+2026-04-05 17:44:07 - INFO - Moved: 1.2_Lomugdang-2.docx -> documents/1.2_Lomugdang-2.docx
+2026-04-05 17:44:07 - INFO - Moved: test.txt -> documents/test.txt
+2026-04-05 17:44:07 - INFO - Moved: 658062647_1586017116024428_3115011682023531109_n.jpg -> photos/658062647_1586017116024428_3115011682023531109_n.jpg
+2026-04-05 17:44:07 - INFO - Moved: 02-Soccer Jersey Mockup_PSD-2.jpg -> photos/02-Soccer Jersey Mockup_PSD-2.jpg
+2026-04-05 17:44:07 - INFO - Moved: Terminal Saved Output.txt -> documents/Terminal Saved Output.txt
+2026-04-05 17:44:07 - INFO - Moved: stat-data-3.docx -> documents/stat-data-3.docx
+2026-04-05 17:44:07 - INFO - Moved: 02-Soccer Jersey Mockup_PSD-3.jpg -> photos/02-Soccer Jersey Mockup_PSD-3.jpg
+2026-04-05 17:44:07 - INFO - Moved: APA_TTest_Report-3.docx -> documents/APA_TTest_Report-3.docx
+2026-04-05 17:44:07 - INFO - Moved: 6f30a88a124ff0e57d9ca5bac6430ef6-4.jpg -> photos/6f30a88a124ff0e57d9ca5bac6430ef6-4.jpg
+2026-04-05 17:44:07 - INFO - Moved: music2.mp3 -> music/music2.mp3
+2026-04-05 17:44:07 - INFO - Moved: THESIS 1.docx -> documents/THESIS 1.docx
+2026-04-05 17:44:07 - INFO - Moved: b9fc6f9a5346e7a7191b37f53e86c59b.jpg -> photos/b9fc6f9a5346e7a7191b37f53e86c59b.jpg
+2026-04-05 17:44:07 - INFO - Moved: CAS_BADMINTON.jpg -> photos/CAS_BADMINTON.jpg
+2026-04-05 17:44:07 - INFO - Moved: 2-Digital-Divide-and-Social-Media-Accessibility.pdf -> pdf/2-Digital-Divide-and-Social-Media-Accessibility.pdf
+2026-04-05 17:44:07 - INFO - Moved: pic.jpg -> photos/pic.jpg
+2026-04-05 17:44:07 - INFO - Moved: cba_frsb.jpg -> photos/cba_frsb.jpg
+2026-04-05 17:44:07 - INFO - Moved: MR KOKIO.jpg -> photos/MR KOKIO.jpg
+2026-04-05 17:44:07 - INFO - Moved: Digital_Divide_Study_Reviewer.pdf -> pdf/Digital_Divide_Study_Reviewer.pdf
+2026-04-05 17:44:07 - INFO - Moved: Untitled.pdf -> pdf/Untitled.pdf
+2026-04-05 17:44:07 - INFO - Moved: cae32e39ee077dddf2a14b5cf091399c.jpg -> photos/cae32e39ee077dddf2a14b5cf091399c.jpg
+2026-04-05 17:44:07 - INFO - Moved: CONCEPT PAPER-6.docx -> documents/CONCEPT PAPER-6.docx
+2026-04-05 17:44:07 - INFO - Moved: Cochran_Sample_Size_Computation-2.docx -> documents/Cochran_Sample_Size_Computation-2.docx
+2026-04-05 17:44:07 - INFO - Moved: 3-Empowering-People-With-Disabilities.pdf -> pdf/3-Empowering-People-With-Disabilities.pdf
+2026-04-05 17:44:07 - INFO - Moved: 6f30a88a124ff0e57d9ca5bac6430ef6-3.jpg -> photos/6f30a88a124ff0e57d9ca5bac6430ef6-3.jpg
+2026-04-05 17:44:07 - INFO - Moved: 5-Business-Models-and-the-Business-Model-Canvas.pdf -> pdf/5-Business-Models-and-the-Business-Model-Canvas.pdf
+2026-04-05 17:44:07 - INFO - Moved: CAS_BADMINTON-2-3-5.jpg -> photos/CAS_BADMINTON-2-3-5.jpg
+2026-04-05 17:44:07 - INFO - Moved: 615489968_908716668343619_5619980655087643500_n.jpg -> photos/615489968_908716668343619_5619980655087643500_n.jpg
+2026-04-05 17:44:07 - INFO - Moved: bgt2.jpg -> photos/bgt2.jpg
+2026-04-05 17:44:07 - INFO - Moved: 1.2_Lomugdang.docx -> documents/1.2_Lomugdang.docx
+2026-04-05 17:44:07 - INFO - Moved: 3a5fb2c5b45ae80c5473ef09f8a8694d.jpg -> photos/3a5fb2c5b45ae80c5473ef09f8a8694d.jpg
+2026-04-05 17:44:07 - INFO - Moved: 6f30a88a124ff0e57d9ca5bac6430ef6-2.jpg -> photos/6f30a88a124ff0e57d9ca5bac6430ef6-2.jpg
+2026-04-05 17:44:07 - INFO - Moved: Untitled design.jpg -> photos/Untitled design.jpg
+2026-04-05 17:44:07 - INFO - Moved: aea21c2b7c72fbb16af3bc8c82106328.jpg -> photos/aea21c2b7c72fbb16af3bc8c82106328.jpg
+2026-04-05 17:44:07 - INFO - Moved: pic-2.jpg -> photos/pic-2.jpg
+2026-04-05 17:44:07 - INFO - Moved: Unknown-9.jpg -> photos/Unknown-9.jpg
+2026-04-05 17:44:07 - INFO - Moved: 5c161a8313c3ccade1d47b3ab9874709.jpg -> photos/5c161a8313c3ccade1d47b3ab9874709.jpg
+2026-04-05 17:44:07 - INFO - Moved: 240_F_669423901_EiiIpShi901MlDWp1omjGMmB22fyGVic.jpg -> photos/240_F_669423901_EiiIpShi901MlDWp1omjGMmB22fyGVic.jpg
+2026-04-05 17:44:07 - INFO - Moved: APA_TTest_Report-2.docx -> documents/APA_TTest_Report-2.docx
+2026-04-05 17:44:07 - INFO - File exists, renamed to: image0.jpg
+2026-04-05 17:44:07 - INFO - Moved: image.jpg -> photos/image0.jpg
+2026-04-05 17:44:07 - INFO - Moved: 81bac5c67d487459bf7d094a73bd2aac-2.jpg -> photos/81bac5c67d487459bf7d094a73bd2aac-2.jpg
+2026-04-05 17:44:07 - INFO - Moved: 08ecf277d41d724e58d6b6c45d7c40fe-2.jpg -> photos/08ecf277d41d724e58d6b6c45d7c40fe-2.jpg
+2026-04-05 17:44:07 - INFO - Moved: stat-data-2.docx -> documents/stat-data-2.docx
+2026-04-05 17:44:07 - INFO - Moved: 6f30a88a124ff0e57d9ca5bac6430ef6.jpg -> photos/6f30a88a124ff0e57d9ca5bac6430ef6.jpg
+2026-04-05 17:44:07 - INFO - Moved: Unknown-8.jpg -> photos/Unknown-8.jpg
+2026-04-05 17:44:07 - INFO - Moved: meta_ethics_report.docx -> documents/meta_ethics_report.docx
+2026-04-05 17:44:07 - INFO - Moved: bg.jpg -> photos/bg.jpg
+2026-04-05 17:47:37 - INFO - No files to move
+2026-04-05 17:47:37 - INFO - Files to move: 0
+2026-04-05 17:49:48 - INFO - No files to move
+2026-04-05 17:49:48 - INFO - Files to move: 0
+2026-04-05 17:52:38 - INFO - No files to move
+2026-04-05 17:52:38 - INFO - Files to move: 0
+2026-04-05 17:53:02 - INFO - Starting file watcher...
+2026-04-05 17:53:02 - INFO - Watcher started with PID: 84786
+2026-04-05 17:53:02 - INFO - File detected: /Users/wii/Projects/python/learning/pathlib/observer.pid
+2026-04-05 17:53:02 - WARNING - No rule for observer.pid, skipping
+2026-04-05 17:53:12 - INFO - File detected: /Users/wii/Downloads/THESIS 1.docx.download
+2026-04-05 17:53:12 - WARNING - No rule for THESIS 1.docx.download, skipping
+2026-04-05 17:53:12 - INFO - File detected: /Users/wii/Downloads/THESIS 1.docx.download/THESIS 1.docx
+2026-04-05 17:53:13 - INFO - Watcher stopped
+2026-04-05 17:55:14 - INFO - Starting file watcher...
+2026-04-05 17:55:14 - INFO - Watcher started with PID: 85342
+2026-04-05 17:55:24 - INFO - File moved: /Users/wii/Downloads/THESIS 1.docx.download/THESIS 1.docx
+2026-04-05 17:55:24 - INFO - File deleted: /Users/wii/Downloads/THESIS 1.docx.download
+2026-04-05 17:56:43 - INFO - File detected: /Users/wii/Downloads/sample.docx
+2026-04-05 17:56:43 - INFO - Moved: sample.docx -> ~/Documents/sample.docx
+2026-04-05 17:56:43 - INFO - File deleted: /Users/wii/Downloads/sample.docx
+2026-04-05 17:58:10 - INFO - File moved: /Users/wii/Downloads/THESIS 1.docx.download/THESIS 1.docx
+2026-04-05 17:58:10 - INFO - File deleted: /Users/wii/Downloads/THESIS 1.docx.download
+2026-04-05 18:00:18 - INFO - File deleted: /Users/wii/Downloads/THESIS 1-2.docx
+2026-04-05 18:00:18 - INFO - File deleted: /Users/wii/Downloads/THESIS 1-3.docx
+2026-04-05 18:00:18 - INFO - File deleted: /Users/wii/Downloads/THESIS 1.docx
+2026-04-05 18:00:29 - INFO - File moved: /Users/wii/Downloads/THESIS 1.docx.download/THESIS 1.docx
+2026-04-05 18:00:29 - INFO - File deleted: /Users/wii/Downloads/THESIS 1.docx.download
+2026-04-05 18:02:15 - INFO - File moved: /Users/wii/Downloads/file-sample_1MB.doc.download/file-sample_1MB.doc
+2026-04-05 18:02:15 - INFO - File deleted: /Users/wii/Downloads/file-sample_1MB.doc.download
+2026-04-05 18:02:15 - INFO - File detected: /Users/wii/Downloads/file-sample_1MB.doc
+2026-04-05 18:02:15 - WARNING - No rule for file-sample_1MB.doc, skipping
+2026-04-05 18:02:41 - INFO - File moved: /Users/wii/Downloads/file-sample_500kB.docx.download/file-sample_500kB.docx
+2026-04-05 18:02:41 - INFO - File deleted: /Users/wii/Downloads/file-sample_500kB.docx.download
+2026-04-05 18:02:41 - INFO - File detected: /Users/wii/Downloads/file-sample_500kB.docx
+2026-04-05 18:02:41 - INFO - Moved: file-sample_500kB.docx -> ~/Documents/file-sample_500kB.docx
+2026-04-05 18:02:41 - INFO - File deleted: /Users/wii/Downloads/file-sample_500kB.docx
+2026-04-05 18:03:18 - INFO - File moved: /Users/wii/Downloads/THESIS 1.docx.download/THESIS 1.docx
+2026-04-05 18:03:18 - INFO - File deleted: /Users/wii/Downloads/THESIS 1.docx.download
+2026-04-05 18:03:18 - INFO - File detected: /Users/wii/Downloads/THESIS 1-2.docx
+2026-04-05 18:03:18 - INFO - Moved: THESIS 1-2.docx -> ~/Documents/THESIS 1-2.docx
+2026-04-05 18:03:18 - INFO - File deleted: /Users/wii/Downloads/THESIS 1-2.docx
+2026-04-05 18:03:49 - INFO - Watcher stopped
+2026-04-05 18:04:19 - INFO - No files to move
+2026-04-05 18:04:19 - INFO - Files to move: 0
+2026-04-05 18:06:30 - INFO - No files to move
+2026-04-05 18:06:30 - INFO - Files to move: 0
+2026-04-05 18:07:24 - INFO - No files to move
+2026-04-05 18:07:24 - INFO - Files to move: 0
+2026-04-05 18:07:34 - INFO - No files to move
+2026-04-05 18:07:34 - INFO - Files to move: 0
+2026-04-05 18:08:15 - INFO - No files to move
+2026-04-05 18:08:15 - INFO - Files to move: 0
+2026-04-05 18:08:57 - INFO - No files to move
+2026-04-05 18:08:57 - INFO - Files to move: 0
+2026-04-05 18:09:30 - INFO - No files to move
+2026-04-05 18:09:30 - INFO - Files to move: 0
+2026-04-05 18:12:15 - INFO - No files to move
+2026-04-05 18:12:15 - INFO - Files to move: 0
+2026-04-05 18:14:02 - INFO - Needs moving: c-sharp.png -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: Flask.png -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: newspaper.png -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: Vim.png -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: Screenshot 2026-03-07 at 12.58.54 AM.png -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: c-.png -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: Git.png -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: docker.png -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: down-arrow.png -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: NOVA PRIME.png -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: python.png -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: Bash.svg -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: settings.png -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: campfire.png -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: Next.js.png -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: Bash.png -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: Django-2.png -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: IMG_3529.HEIC -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: Express.png -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: js.png -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: home.png -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: pngegg.png -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: right-arrow.png -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: Linux.png -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: nextjs-icon-svgrepo-com.svg -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: physics.png -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: Figma.png -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: IMPULSE.png -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: CAFE CIELLI.png -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: IMG_3527.HEIC -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: CHOWKING.png -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: viral-marketing.png -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: mysql.png -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: django.png -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: notify.png -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: view.png -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: icons8-add-50.png -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: sample.png -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: podium.png -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: GitHub Actions.png -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: front white.png -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: Node.js.png -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: IMG_4155.HEIC -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: MainLogoBlack.png -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: MEDIFIX.png -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: THESIS 1.docx -> ~/Documents
+2026-04-05 18:14:02 - INFO - Needs moving: IMG_4163.HEIC -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: home-2.png -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: typescript.png -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: b9fc6f9a5346e7a7191b37f53e86c59b.png -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: profile-2.png -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: php.png -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: postgre.png -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: MongoDB.png -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: Laravel.png -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: icons8-reply-100.png -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: 59597205784.png -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: image.png -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Needs moving: github-icon-2.svg -> ~/Pictures
+2026-04-05 18:14:02 - INFO - Files to move: 59
+2026-04-05 18:14:02 - INFO - Moved: c-sharp.png -> ~/Pictures/c-sharp.png
+2026-04-05 18:14:02 - INFO - Moved: Flask.png -> ~/Pictures/Flask.png
+2026-04-05 18:14:02 - INFO - Moved: newspaper.png -> ~/Pictures/newspaper.png
+2026-04-05 18:14:02 - INFO - Moved: Vim.png -> ~/Pictures/Vim.png
+2026-04-05 18:14:02 - INFO - Moved: Screenshot 2026-03-07 at 12.58.54 AM.png -> ~/Pictures/Screenshot 2026-03-07 at 12.58.54 AM.png
+2026-04-05 18:14:02 - INFO - Moved: c-.png -> ~/Pictures/c-.png
+2026-04-05 18:14:02 - INFO - Moved: Git.png -> ~/Pictures/Git.png
+2026-04-05 18:14:02 - INFO - Moved: docker.png -> ~/Pictures/docker.png
+2026-04-05 18:14:02 - INFO - Moved: down-arrow.png -> ~/Pictures/down-arrow.png
+2026-04-05 18:14:02 - INFO - Moved: NOVA PRIME.png -> ~/Pictures/NOVA PRIME.png
+2026-04-05 18:14:02 - INFO - Moved: python.png -> ~/Pictures/python.png
+2026-04-05 18:14:02 - INFO - Moved: Bash.svg -> ~/Pictures/Bash.svg
+2026-04-05 18:14:02 - INFO - Moved: settings.png -> ~/Pictures/settings.png
+2026-04-05 18:14:02 - INFO - Moved: campfire.png -> ~/Pictures/campfire.png
+2026-04-05 18:14:02 - INFO - Moved: Next.js.png -> ~/Pictures/Next.js.png
+2026-04-05 18:14:02 - INFO - Moved: Bash.png -> ~/Pictures/Bash.png
+2026-04-05 18:14:02 - INFO - Moved: Django-2.png -> ~/Pictures/Django-2.png
+2026-04-05 18:14:02 - INFO - Moved: IMG_3529.HEIC -> ~/Pictures/IMG_3529.HEIC
+2026-04-05 18:14:02 - INFO - Moved: Express.png -> ~/Pictures/Express.png
+2026-04-05 18:14:02 - INFO - Moved: js.png -> ~/Pictures/js.png
+2026-04-05 18:14:02 - INFO - Moved: home.png -> ~/Pictures/home.png
+2026-04-05 18:14:02 - INFO - Moved: pngegg.png -> ~/Pictures/pngegg.png
+2026-04-05 18:14:02 - INFO - Moved: right-arrow.png -> ~/Pictures/right-arrow.png
+2026-04-05 18:14:02 - INFO - Moved: Linux.png -> ~/Pictures/Linux.png
+2026-04-05 18:14:02 - INFO - Moved: nextjs-icon-svgrepo-com.svg -> ~/Pictures/nextjs-icon-svgrepo-com.svg
+2026-04-05 18:14:02 - INFO - Moved: physics.png -> ~/Pictures/physics.png
+2026-04-05 18:14:02 - INFO - Moved: Figma.png -> ~/Pictures/Figma.png
+2026-04-05 18:14:02 - INFO - Moved: IMPULSE.png -> ~/Pictures/IMPULSE.png
+2026-04-05 18:14:02 - INFO - Moved: CAFE CIELLI.png -> ~/Pictures/CAFE CIELLI.png
+2026-04-05 18:14:02 - INFO - Moved: IMG_3527.HEIC -> ~/Pictures/IMG_3527.HEIC
+2026-04-05 18:14:02 - INFO - Moved: CHOWKING.png -> ~/Pictures/CHOWKING.png
+2026-04-05 18:14:02 - INFO - Moved: viral-marketing.png -> ~/Pictures/viral-marketing.png
+2026-04-05 18:14:02 - INFO - Moved: mysql.png -> ~/Pictures/mysql.png
+2026-04-05 18:14:02 - INFO - Moved: django.png -> ~/Pictures/django.png
+2026-04-05 18:14:02 - INFO - Moved: notify.png -> ~/Pictures/notify.png
+2026-04-05 18:14:02 - INFO - Moved: view.png -> ~/Pictures/view.png
+2026-04-05 18:14:02 - INFO - Moved: icons8-add-50.png -> ~/Pictures/icons8-add-50.png
+2026-04-05 18:14:02 - INFO - Moved: sample.png -> ~/Pictures/sample.png
+2026-04-05 18:14:02 - INFO - Moved: podium.png -> ~/Pictures/podium.png
+2026-04-05 18:14:02 - INFO - Moved: GitHub Actions.png -> ~/Pictures/GitHub Actions.png
+2026-04-05 18:14:02 - INFO - Moved: front white.png -> ~/Pictures/front white.png
+2026-04-05 18:14:02 - INFO - Moved: Node.js.png -> ~/Pictures/Node.js.png
+2026-04-05 18:14:02 - INFO - Moved: IMG_4155.HEIC -> ~/Pictures/IMG_4155.HEIC
+2026-04-05 18:14:02 - INFO - Moved: MainLogoBlack.png -> ~/Pictures/MainLogoBlack.png
+2026-04-05 18:14:02 - INFO - Moved: MEDIFIX.png -> ~/Pictures/MEDIFIX.png
+2026-04-05 18:14:02 - INFO - Moved: THESIS 1.docx -> ~/Documents/THESIS 1.docx
+2026-04-05 18:14:02 - INFO - Moved: IMG_4163.HEIC -> ~/Pictures/IMG_4163.HEIC
+2026-04-05 18:14:02 - INFO - Moved: home-2.png -> ~/Pictures/home-2.png
+2026-04-05 18:14:02 - INFO - Moved: typescript.png -> ~/Pictures/typescript.png
+2026-04-05 18:14:02 - INFO - Moved: b9fc6f9a5346e7a7191b37f53e86c59b.png -> ~/Pictures/b9fc6f9a5346e7a7191b37f53e86c59b.png
+2026-04-05 18:14:02 - INFO - Moved: profile-2.png -> ~/Pictures/profile-2.png
+2026-04-05 18:14:02 - INFO - Moved: php.png -> ~/Pictures/php.png
+2026-04-05 18:14:02 - INFO - Moved: postgre.png -> ~/Pictures/postgre.png
+2026-04-05 18:14:02 - INFO - Moved: MongoDB.png -> ~/Pictures/MongoDB.png
+2026-04-05 18:14:02 - INFO - Moved: Laravel.png -> ~/Pictures/Laravel.png
+2026-04-05 18:14:02 - INFO - Moved: icons8-reply-100.png -> ~/Pictures/icons8-reply-100.png
+2026-04-05 18:14:02 - INFO - Moved: 59597205784.png -> ~/Pictures/59597205784.png
+2026-04-05 18:14:02 - INFO - Moved: image.png -> ~/Pictures/image.png
+2026-04-05 18:14:02 - INFO - Moved: github-icon-2.svg -> ~/Pictures/github-icon-2.svg
+2026-04-05 18:18:04 - INFO - No files to move
+2026-04-05 18:18:04 - INFO - Files to move: 0
+2026-04-05 18:19:39 - INFO - No files to move
+2026-04-05 18:19:39 - INFO - Files to move: 0
+2026-04-05 18:20:00 - INFO - No files to move
+2026-04-05 18:20:00 - INFO - Files to move: 0
