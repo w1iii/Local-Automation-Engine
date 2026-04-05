@@ -56,6 +56,7 @@ logger.addHandler(file_handler)
 
 class Handler(FileSystemEventHandler):
     def on_created(self, event):
+        time.sleep(2)
         file = event.src_path
 
         for pattern in EXCLUDE_PATTERNS:
@@ -120,11 +121,14 @@ def check_folder(folder):
 
 
 @app.command(name="clean")
-def clean_folder(folder: str = typer.Option(".", help="folder (use '.' for current directory)")):
+def clean_folder(
+    folder: str = typer.Option(".", help="folder (use '.' for current directory)"),
+):
     if folder == ".":
         target_folder = Path.cwd()
     else:
         target_folder = Path(folder).expanduser().resolve()
+    print(target_folder)
 
     files_to_move = check_folder(target_folder)
     logger.info(f"Files to move: {len(files_to_move)}")
@@ -140,7 +144,9 @@ def clean_folder(folder: str = typer.Option(".", help="folder (use '.' for curre
 
 
 @app.command(name="start")
-def start_obs(path: str = typer.Option(".", help="path to watch (use '.' for current directory)")):
+def start_obs(
+    path: str = typer.Option(".", help="path to watch (use '.' for current directory)"),
+):
     watch_path = Path(path).expanduser().resolve() if path != "." else Path.cwd()
     logger.info(f"Starting file watcher on: {watch_path}")
     with open(SCRIPT_DIR / "observer.pid", "w") as f:
