@@ -17,6 +17,10 @@
             "dest": "~/Pictures"
         },
         {
+            "ext": ".PNG",
+            "dest": "~/Pictures"
+        },
+        {
             "ext": ".svg",
             "dest": "~/Pictures"
         },
@@ -27,6 +31,18 @@
         {
             "ext": ".mp3",
             "dest": "~/Music"
+        },
+        {
+            "ext": ".MOV",
+            "dest": "~/Movies"
+        },
+        {
+            "ext": ".mp4",
+            "dest": "~/Movies"
+        },
+        {
+            "ext": ".MP4",
+            "dest": "~/Movies"
         },
         {
             "ext": ".pdf",
