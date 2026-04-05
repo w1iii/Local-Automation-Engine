@@ -9,7 +9,9 @@ A Python CLI tool that automatically organizes files by moving them to designate
 - **Manual cleanup** - Sort existing files in any folder with the `clean` command
 - **Duplicate handling** - Automatically renames files if a duplicate exists in the destination
 - **Large file detection** - Files >= 5GB are moved to a `largefiles` subfolder
+- **Download safety** - Skips incomplete downloads (`.download`, `.crdownload`, `.part`, `.tmp`)
 - **Logging** - All actions are logged with timestamps to console and `app.log`
+- **Portable** - Run from any directory, paths are relative to script location
 
 ## Installation
 
@@ -19,50 +21,76 @@ pip install typer watchdog
 
 ## Configuration
 
-Edit `rules.json` to define your sorting rules:
+Edit `rules.json` to define your sorting rules. Use `~` for home directory paths:
 
 ```json
 {
     "rules": [
-        {"ext": ".txt", "dest": "documents"},
-        {"ext": ".jpg", "dest": "photos"},
-        {"ext": ".mp3", "dest": "music"},
-        {"ext": ".pdf", "dest": "pdf"}
+        {"ext": ".txt", "dest": "~/Documents"},
+        {"ext": ".docx", "dest": "~/Documents"},
+        {"ext": ".jpg", "dest": "~/Pictures"},
+        {"ext": ".mp3", "dest": "~/Music"},
+        {"ext": ".pdf", "dest": "~/Documents"}
     ]
 }
 ```
 
+### Rule Options
+
+| Extension | Destination | Notes |
+|-----------|-------------|-------|
+| `.txt` | `~/Documents` | Text files |
+| `.docx` | `~/Documents` | Word documents |
+| `.jpg` | `~/Pictures` | Images |
+| `.png` | `~/Pictures` | Images |
+| `.mp3` | `~/Music` | Music files |
+| `.pdf` | `~/Documents` | PDF documents |
+
 ## Usage
+
+### Start Watcher
+
+Watch current directory for new files:
+```bash
+filesorter start
+```
+
+Watch a specific directory:
+```bash
+filesorter start --path ~/Downloads
+```
+
+### Stop Watcher
+
+```bash
+filesorter stop
+```
+
+### Manual Cleanup
+
+Sort files in current directory:
+```bash
+filesorter clean
+```
+
+Sort files in a specific folder:
+```bash
+filesorter clean --folder ~/Downloads
+filesorter clean --folder /path/to/folder
+```
+
+Use `.` for current working directory (default).
 
 ### Manage Rules
 
 Add a new rule:
 ```bash
-python3 main.py rules add --ext ".png" --dest "images"
+filesorter rules add --ext ".png" --dest "~/Pictures"
 ```
 
 Delete a rule:
 ```bash
-python3 main.py rules delete --ext ".png"
-```
-
-### Start/Stop Watcher
-
-Start watching for new files:
-```bash
-python3 main.py start
-```
-
-Stop the watcher:
-```bash
-python3 main.py stop
-```
-
-### Manual Cleanup
-
-Sort files in a specific folder:
-```bash
-python3 main.py clean --folder downloads
+filesorter rules delete --ext ".png"
 ```
 
 ### View Logs
@@ -80,7 +108,8 @@ cat app.log
 ├── rules_engine.py   # Rules management
 ├── rules.json        # Configuration file
 ├── app.log           # Log file (created automatically)
-└── [folders]/        # Destination folders for sorted files
+├── observer.pid       # PID file (created when running)
+└── [folders]/        # Destination folders
 ```
 
 ## Log Levels
@@ -91,3 +120,21 @@ cat app.log
 | WARNING | Skipped files (no rule, already moved) |
 | ERROR | Failed operations |
 | DEBUG | Files already in correct folder |
+
+## Installation as Command
+
+To run `filesorter` from anywhere:
+
+```bash
+mkdir -p ~/.local/bin
+cat > ~/.local/bin/filesorter << 'EOF'
+#!/bin/zsh
+SCRIPT_DIR="/path/to/your/project"
+exec python3 "$SCRIPT_DIR/main.py" "$@"
+EOF
+chmod +x ~/.local/bin/filesorter
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
+```
+
+Replace `/path/to/your/project` with the actual path to this project.
