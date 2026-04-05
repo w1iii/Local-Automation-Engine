@@ -1,0 +1,5 @@
+2026-04-05 17:21:18 - INFO - No files to move
+2026-04-05 17:21:18 - INFO - Files to move: 0
+2026-04-05 17:23:22 - INFO - Needs moving: new.txt -> documents
+2026-04-05 17:23:22 - INFO - Files to move: 1
+2026-04-05 17:23:22 - INFO - Moved: new.txt -> documents/new.txt

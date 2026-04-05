@@ -21,32 +21,43 @@ app.add_typer(rules_app, name="rules")
 observer = Observer()
 rules.load_rules()
 
+LOG_FILE = "app.log"
 
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s - %(message)s",
-    datefmt="%Y-%m-%d %H:%M:%S",
-)
+logger = logging.getLogger("file_sorter")
+logger.setLevel(logging.INFO)
+
+console_handler = logging.StreamHandler()
+console_handler.setLevel(logging.DEBUG)
+console_format = logging.Formatter("%(asctime)s - %(message)s", datefmt="%Y-%m-%d %H:%M:%S")
+console_handler.setFormatter(console_format)
+
+file_handler = logging.FileHandler(LOG_FILE)
+file_handler.setLevel(logging.DEBUG)
+file_format = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s", datefmt="%Y-%m-%d %H:%M:%S")
+file_handler.setFormatter(file_format)
+
+logger.addHandler(console_handler)
+logger.addHandler(file_handler)
 
 
 class Handler(FileSystemEventHandler):
     def on_created(self, event):
-        print("Created: ", event.src_path)
+        logger.info(f"File detected: {event.src_path}")
         file = event.src_path
         move_file(file)
 
     def on_deleted(self, event):
-        print("Deleted: ", event.src_path)
+        logger.info(f"File deleted: {event.src_path}")
 
     def on_moved(self, event):
-        print("Moved: ", event.src_path)
+        logger.info(f"File moved: {event.src_path}")
 
 
 def move_file(file):
     filename = Path(file).name
     destination = rules.find_destination(file)
     if not destination:
-        print(f"No rule for {filename}, skipping")
+        logger.warning(f"No rule for {filename}, skipping")
         return
     dest = cwd / f"{destination}/"
     dest.mkdir(parents=True, exist_ok=True)
@@ -56,7 +67,6 @@ def move_file(file):
     if not rules.filesize(file):
         target_file = dest / "largefiles/" / filename
         Path(f"{path}/largefiles").mkdir(exist_ok=True)
-    # print(target_file)
     if target_file.exists():
         count = 0
         newfilename = target_file.stem
@@ -69,9 +79,9 @@ def move_file(file):
             new_name = f"{newfilename}{count}{target_file.suffix}"
             target_file = target_file.parent / new_name
             count += 1
-        print("file already exists, renaming to", target_file.name)
+        logger.info(f"File exists, renamed to: {target_file.name}")
     shutil.move(file, target_file)
-    # rules.filesize(target_file, pathfile)
+    logger.info(f"Moved: {filename} -> {destination}/{target_file.name}")
 
 
 def check_folder(folder):
@@ -82,13 +92,12 @@ def check_folder(folder):
             if dest:
                 expected_dest = cwd / dest
                 if item.parent.resolve() == expected_dest.resolve():
-                    pass
-                    # print(f"Already in correct folder: {item.name}")
+                    logger.debug(f"Already in correct folder: {item.name}")
                 else:
                     files_to_move.append(item)
-                    print(f"Needs moving: {item.name} -> {dest}")
+                    logger.info(f"Needs moving: {item.name} -> {dest}")
     if len(files_to_move) <= 0:
-        print("No files to move")
+        logger.info("No files to move")
     return files_to_move
 
 
@@ -98,7 +107,7 @@ def clean_folder(folder: str = typer.Option(..., help="folder")):
     target_folder = base_dir / folder
 
     files_to_move = check_folder(target_folder)
-    print(f"Files to move: {len(files_to_move)}")
+    logger.info(f"Files to move: {len(files_to_move)}")
 
     if len(files_to_move) < 1:
         return
@@ -106,18 +115,17 @@ def clean_folder(folder: str = typer.Option(..., help="folder")):
     for file in files_to_move:
         try:
             move_file(str(file))
-            print(f"Moved: {file.name}")
         except FileNotFoundError:
-            print(f"Already moved or missing: {file.name}")
+            logger.warning(f"Already moved or missing: {file.name}")
 
 
 @app.command(name="start")
 def start_obs():
-    print("start")
+    logger.info("Starting file watcher...")
     with open("observer.pid", "w") as f:
         pid = os.getpid()
         f.write(str(pid))
-    print(pid)
+    logger.info(f"Watcher started with PID: {pid}")
 
     observer.schedule(Handler(), str(cwd), recursive=False)
     observer.schedule(Handler(), str(downloads), recursive=True)
@@ -132,6 +140,7 @@ def start_obs():
     finally:
         if os.path.exists("observer.pid"):
             os.remove("observer.pid")
+        logger.info("Watcher stopped")
 
 
 @app.command(name="stop")
@@ -139,16 +148,16 @@ def stop_obs():
     try:
         with open("observer.pid", "r") as f:
             pid = int(f.read().strip())
-        print(f"Sending SIGINT to observer with PID {pid} ...")
+        logger.info(f"Stopping watcher with PID: {pid}...")
         os.kill(pid, signal.SIGINT)
         os.remove("observer.pid")
-        print("Observer process stopped.")
+        logger.info("Watcher stopped successfully")
     except FileNotFoundError:
-        print("PID file not found. Is the observer running?")
+        logger.error("PID file not found. Is the watcher running?")
     except ProcessLookupError:
-        print("Process not found (already stopped?)")
+        logger.error("Process not found (already stopped?)")
     except Exception as e:
-        print(f"Error stopping observer: {e}")
+        logger.error(f"Error stopping watcher: {e}")
 
 
 if __name__ == "__main__":
