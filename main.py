@@ -44,12 +44,15 @@ class Handler(FileSystemEventHandler):
 
 def move_file(file):
     filename = Path(file).name
-    dest = cwd / f"{rules.find_destination(file)}/"
-    # pathfile = rules.find_destination(file)
+    destination = rules.find_destination(file)
+    if not destination:
+        print(f"No rule for {filename}, skipping")
+        return
+    dest = cwd / f"{destination}/"
     dest.mkdir(parents=True, exist_ok=True)
 
     target_file = dest / filename
-    path = f"./{rules.find_destination(file)}"
+    path = f"./{destination}"
     if not rules.filesize(file):
         target_file = dest / "largefiles/" / filename
         Path(f"{path}/largefiles").mkdir(exist_ok=True)
@@ -71,13 +74,46 @@ def move_file(file):
     # rules.filesize(target_file, pathfile)
 
 
-# Start observing file cli
+def check_folder(folder):
+    files_to_move = []
+    for item in folder.iterdir():
+        if item.is_file():
+            dest = rules.find_destination(str(item))
+            if dest:
+                expected_dest = cwd / dest
+                if item.parent.resolve() == expected_dest.resolve():
+                    pass
+                    # print(f"Already in correct folder: {item.name}")
+                else:
+                    files_to_move.append(item)
+                    print(f"Needs moving: {item.name} -> {dest}")
+    if len(files_to_move) <= 0:
+        print("No files to move")
+    return files_to_move
+
+
+@app.command(name="clean")
+def clean_folder(folder: str = typer.Option(..., help="folder")):
+    base_dir = Path.cwd()
+    target_folder = base_dir / folder
+
+    files_to_move = check_folder(target_folder)
+    print(f"Files to move: {len(files_to_move)}")
+
+    if len(files_to_move) < 1:
+        return
+
+    for file in files_to_move:
+        try:
+            move_file(str(file))
+            print(f"Moved: {file.name}")
+        except FileNotFoundError:
+            print(f"Already moved or missing: {file.name}")
 
 
 @app.command(name="start")
 def start_obs():
     print("start")
-    # Save current PID to file
     with open("observer.pid", "w") as f:
         pid = os.getpid()
         f.write(str(pid))

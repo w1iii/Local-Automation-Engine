@@ -10,7 +10,6 @@ rules_file = Path("./rules.json")
 
 class Rules:
     def __init__(self):
-        pass
         self.rules = []
 
     @app.command(name="add")
@@ -31,7 +30,6 @@ class Rules:
             data = json.load(f)
             for rules in data["rules"]:
                 print(rules)
-            f.close()
 
         print("rule added successfully")
 
@@ -54,28 +52,28 @@ class Rules:
             data = json.load(f)
             for rules in data["rules"]:
                 print(rules)
-        f.close()
         print("rule deleted successfully")
 
     def load_rules(self):
         try:
             with open("rules.json", "r") as f:
-                # rules = f["rules"]
                 data = json.load(f)
                 rules = data["rules"]
-                # for ext in rules:
-                #     print(f"{ext.get('ext')} -> {ext.get('dest')}")
                 self.rules = rules
                 return rules
-        except TypeError:
-            print("'_io.TextIOWrapper' object is not subscriptable")
+        except FileNotFoundError:
+            print("rules.json not found")
+            return []
+        except json.JSONDecodeError:
+            print("Invalid JSON in rules.json")
+            return []
 
     def test_rules(self, file):
         print("test rules: ", file)
 
     def find_destination(self, file):
         filename = Path(file).name
-        rules = self.load_rules()
+        rules = self.rules
         for rule in rules:
             if filename.endswith(rule.get("ext")):
                 return rule.get("dest")
