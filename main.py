@@ -55,22 +55,37 @@ logger.addHandler(file_handler)
 
 
 class Handler(FileSystemEventHandler):
-    def on_created(self, event):
-        time.sleep(2)
-        file = event.src_path
-
+    def _process_file(self, file):
         for pattern in EXCLUDE_PATTERNS:
             if pattern in file:
                 return
-
-        logger.info(f"File detected: {event.src_path}")
+        logger.info(f"File detected: {file}")
+        time.sleep(1)
         move_file(file)
+
+    def on_created(self, event):
+        self._process_file(event.src_path)
+
+    def on_modified(self, event):
+        pass
 
     def on_deleted(self, event):
         logger.info(f"File deleted: {event.src_path}")
 
     def on_moved(self, event):
-        logger.info(f"File moved: {event.src_path}")
+        src = event.src_path
+        dest = event.dest_path
+
+        for pattern in EXCLUDE_PATTERNS:
+            if pattern in src or pattern in dest:
+                return
+
+        logger.info(f"File renamed/moved: {src} -> {dest}")
+
+        dest_path = Path(dest)
+        if dest_path.is_file():
+            time.sleep(1)
+            move_file(dest)
 
 
 def move_file(file):
