@@ -13,11 +13,48 @@ A Python CLI tool that automatically organizes files by moving them to designate
 - **Logging** - All actions are logged with timestamps to console and `app.log`
 - **Portable** - Run from any directory, paths are relative to script location
 
-## Installation
+---
+
+## Setup
+
+### 1. Install Dependencies
 
 ```bash
 pip install typer watchdog
 ```
+
+### 2. Install as Command (Optional)
+
+Run `filesorter` from anywhere on your system:
+
+```bash
+mkdir -p ~/.local/bin
+
+cat > ~/.local/bin/filesorter << 'EOF'
+#!/bin/zsh
+SCRIPT_DIR="/Users/wii/Projects/python/learning/pathlib"
+exec python3 "$SCRIPT_DIR/main.py" "$@"
+EOF
+
+chmod +x ~/.local/bin/filesorter
+```
+
+### 3. Add to PATH
+
+Add to your shell config:
+
+```bash
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
+```
+
+### 4. Verify Installation
+
+```bash
+filesorter --help
+```
+
+---
 
 ## Configuration
 
@@ -35,22 +72,25 @@ Edit `rules.json` to define your sorting rules. Use `~` for home directory paths
 }
 ```
 
-### Rule Options
+### Adding Rules via CLI
 
-| Extension | Destination | Notes |
-|-----------|-------------|-------|
-| `.txt` | `~/Documents` | Text files |
-| `.docx` | `~/Documents` | Word documents |
-| `.jpg` | `~/Pictures` | Images |
-| `.png` | `~/Pictures` | Images |
-| `.mp3` | `~/Music` | Music files |
-| `.pdf` | `~/Documents` | PDF documents |
+Add a new rule:
+```bash
+filesorter rules add --ext ".png" --dest "~/Pictures"
+```
+
+Delete a rule:
+```bash
+filesorter rules delete --ext ".png"
+```
+
+---
 
 ## Usage
 
 ### Start Watcher
 
-Watch current directory for new files:
+Watch current directory:
 ```bash
 filesorter start
 ```
@@ -81,34 +121,23 @@ filesorter clean --folder /path/to/folder
 
 Use `.` for current working directory (default).
 
-### Manage Rules
-
-Add a new rule:
-```bash
-filesorter rules add --ext ".png" --dest "~/Pictures"
-```
-
-Delete a rule:
-```bash
-filesorter rules delete --ext ".png"
-```
-
 ### View Logs
 
-All actions are logged to `app.log`:
 ```bash
 cat app.log
 ```
+
+---
 
 ## Project Structure
 
 ```
 .
 ├── main.py           # Main CLI application
-├── rules_engine.py   # Rules management
+├── rules_engine.py    # Rules management
 ├── rules.json        # Configuration file
 ├── app.log           # Log file (created automatically)
-├── observer.pid       # PID file (created when running)
+├── observer.pid      # PID file (created when running)
 └── [folders]/        # Destination folders
 ```
 
@@ -120,21 +149,3 @@ cat app.log
 | WARNING | Skipped files (no rule, already moved) |
 | ERROR | Failed operations |
 | DEBUG | Files already in correct folder |
-
-## Installation as Command
-
-To run `filesorter` from anywhere:
-
-```bash
-mkdir -p ~/.local/bin
-cat > ~/.local/bin/filesorter << 'EOF'
-#!/bin/zsh
-SCRIPT_DIR="/path/to/your/project"
-exec python3 "$SCRIPT_DIR/main.py" "$@"
-EOF
-chmod +x ~/.local/bin/filesorter
-echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
-source ~/.zshrc
-```
-
-Replace `/path/to/your/project` with the actual path to this project.
